@@ -1,0 +1,45 @@
+version: '3'
+
+services:
+  php71:
+    build: ./services/php71
+    container_name: php71
+    volumes:
+      - ./services/php71/php.ini:/usr/local/etc/php/php.ini
+      - ./workspace:/workspace
+    working_dir: /workspace
+    ports:
+      - '9000'
+  php72:
+    build: ./services/php72
+    container_name: php72
+    volumes:
+      - ./services/php72/php.ini:/usr/local/etc/php/php.ini
+      - ./workspace:/workspace
+    working_dir: /workspace
+    ports:
+      - '9000'
+    environment:
+      - "TZ=Asia/Tokyo"
+  php73:
+    build: ./services/php73
+    container_name: php73
+    volumes:
+      - ./services/php73/php.ini:/usr/local/etc/php/php.ini
+      - ./workspace:/workspace
+    working_dir: /workspace
+    ports:
+      - '9000'
+    environment:
+      - "TZ=Asia/Tokyo"
+  php74:
+    build: ./services/php74
+    container_name: php74
+    volumes:
+      - ./services/php74/php.ini:/usr/local/etc/php/php.ini
+      - ./workspace:/workspace
+    working_dir: /workspace
+    ports:
+      - '9000'
+    environment:
+      - "TZ=Asia/Tokyo"
